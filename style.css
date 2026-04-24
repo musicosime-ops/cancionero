@@ -1,0 +1,641 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0px;
+}
+body.dark-mode {
+  background-color: #111;
+  color: #eee;
+}
+body.dark-mode header,
+body.dark-mode nav,
+body.dark-mode .song,
+body.dark-mode footer {
+  background-color: #222 !important;
+  color: #fff !important;
+}
+
+body.dark-mode a {
+  color: #9cf !important;
+}
+
+body.dark-mode button,
+body.dark-mode input {
+  background-color: #333 !important;
+  color: #fff !important;
+}
+
+body.dark-mode .floating-button {
+  background-color: #555 !important;
+}
+
+
+#autoScrollBtn.active {
+  background-color: #27ae60 !important;
+}
+.heart-btn {
+  color: grey !important;
+}
+.heart-btn[style*="color: red"] {
+  color: red !important;
+}
+#darkModeBtn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+#darkModeBtn:hover {
+  transform: scale(1.2);
+}
+body.dark-mode .chorus {
+  color: #cfe9ff !important;
+  font-weight: bold;
+  text-shadow: 0 0 6px rgba(207, 233, 255, 0.6);
+}
+body.dark-mode h3 {
+  color: #e0e0e0 !important;
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.1);
+}
+body.dark-mode #favoritos {
+  color: #e0e0e0 !important;
+}
+
+header {
+  background-color: #2c3e50;
+  color: rgb(16, 10, 10);
+  padding: 20px;
+  text-align: center;
+  background-image: url(espiritu-santo.png);
+  background-position: center;
+}
+input#searchBar {
+  width: 80%;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 16px;
+}
+.floating-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 1000;
+  display: none;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.floating-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+nav.navbar {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #2d2d2d;
+  color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  color: white;
+}
+
+.nav-title {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.nav-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 10px;
+}
+.menu > li {
+  position: relative;
+}
+.menu > li > a {
+  display: block;
+  padding: 10px 16px;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+.menu > li > a:hover {
+  background: #444;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #333;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  min-width: 180px;
+  border-radius: 0 0 8px 8px;
+  z-index: 100;
+}
+.dropdown-menu li a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+.dropdown-menu li a:hover {
+  background: #555;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+.destacado {
+  background: #ff5555;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+.destacado:hover {
+  background: #ff7777;
+}
+.destacado.azul {
+  background: #3b82f6;
+}
+.destacado.azul:hover {
+  background: #60a5fa;
+}
+.destacado.rojo {
+  background: #ef4444;
+}
+.destacado.rojo:hover {
+  background: #f87171;
+}
+.destacado.verde {
+  background: #22c55e;
+}
+.destacado.verde:hover {
+  background: #4ade80;
+}
+h2 {
+  color: #34495e;
+  text-align: center;
+  margin-top: 40px;
+}
+#canciones_nuevas {
+  color: red;
+}
+section#songList {
+  margin: 20px;
+}
+.song {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+}
+.song h3 {
+  color: #34495e;
+}
+.lyrics {
+  font-family: 1.7em;
+  white-space: pre-wrap;
+}
+.chorus {
+  font-weight: bold;
+  color: red;
+  font-size: 1.5em;
+}
+div.lyrics,
+p.lyrics {
+  font-family: Arial, sans-serif;
+  font-size: 1.8em;
+  line-height: 1.6;
+  white-space: normal;
+  word-wrap: break-word;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+strong.chorus {
+  font-weight: bold;
+  color: blue;
+}
+.song-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.song-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+.song-list li:last-child {
+  border-bottom: none;
+}
+.song-list a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+.song-list a:hover {
+  color: #777;
+}
+.song-number {
+  color: #555;
+  font-style: italic;
+}
+#espiritu {
+  background-color: red;
+  color: white;
+}
+#padre {
+  background-color: white;
+}
+#maria {
+  background-color: #80daeb;
+  color: black;
+}
+#jesus {
+  background-color: #4586f7;
+  color: white;
+}
+#perdon {
+  background-color: #6a11cb;
+  color: white;
+}
+#navidad {
+  background-color: #d4af37;
+}
+#rezos {
+  background-color: rgb(32, 148, 32);
+  color: white;
+}
+#eucaristico {
+  background-color: yellow;
+}
+.boton {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #6e86c2;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+.boton:hover {
+  background-color: #a2cadf;
+}
+.heart-btn:hover {
+  transform: scale(1.2);
+  transition: transform 0.2s ease;
+}
+.delete-btn:hover {
+  transform: scale(1.2);
+  color: red;
+  transition: all 0.2s ease;
+}
+.remove-fav {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: #ff0000;
+  font-size: 1.4em;
+  cursor: pointer;
+  font-weight: bold;
+  transition:
+    transform 0.2s,
+    color 0.2s;
+  z-index: 10;
+}
+.remove-fav:hover {
+  transform: scale(1.2);
+  color: #b30000;
+}
+.song {
+  position: relative;
+  padding-top: 2em;
+}
+.indice-letras ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  margin: 10px 0;
+  list-style: none;
+  justify-content: center;
+}
+
+.indice-letras li a {
+  display: inline-block;
+  padding: 8px 12px;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: none;
+  color: #1f2937;
+  background: #f3f4f6;
+  border-radius: 6px;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+.indice-letras li a:hover {
+  background: #0000ff;
+  color: white;
+}
+.indice-letras li a.especial {
+  background: #00bfff;
+  color: black;
+}
+.indice-letras li a.especial:hover {
+  background: #0000ff;
+}
+.favoritos-vacio {
+  font-family: "Arial Black", Arial, sans-serif;
+  font-size: 1.3em;
+  color: #ef4444;
+  text-align: center;
+  margin: 40px 0;
+}
+#simbAudio {
+  text-align: center;
+}
+#goToTitleBtn {
+  background-color: #2c3e50;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+#goToTitleBtn:hover {
+  background-color: #34495e;
+}
+.no-audio-msg {
+  color: #ccc;
+  font-style: italic;
+  margin-top: 8px;
+  text-align: center;
+}
+/* Cada línea de la canción */
+.linea {
+  margin-bottom: 14px;
+  line-height: 1.6;
+}
+
+/* Contenedor de palabra + acorde */
+.bloque {
+  position: relative;
+  display: inline-block;
+  margin-right: 2px;
+}
+
+/* Acorde arriba de la palabra */
+.acorde {
+  position: absolute;
+  top: -18px;
+  left: 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #c0392b;
+  white-space: nowrap;
+}
+.ocultar-acordes .acorde {
+  display: none;
+}
+.btn-acordes {
+  background: linear-gradient(135deg, #3498db, #2c80b4);
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 8px 0;
+  transition: all 0.2s ease;
+}
+
+/* Hover (cuando pasás el mouse) */
+.btn-acordes:hover {
+  background: linear-gradient(135deg, #2c80b4, #1f6690);
+  transform: scale(1.05);
+}
+
+/* Click */
+.btn-acordes:active {
+  transform: scale(0.97);
+}
+.song .btn-acordes {
+  display: inline-block;
+}
+/* Opcional: sombra suave */
+.btn-acordes {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+/* Espaciado general de la letra */
+.lyrics {
+  margin-top: 10px;
+}
+/* Contenedor */
+.controles-tono {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+/* Botones */
+.btn-tono {
+  background: linear-gradient(135deg, #3498db, #2c80b4);
+  color: white;
+  border: none;
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover */
+.btn-tono:hover {
+  transform: scale(1.1);
+}
+
+/* Click */
+.btn-tono:active {
+  transform: scale(0.95);
+}
+
+/* Indicador */
+.indicador-tono {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  min-width: 60px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  /* LETRA */
+  .lyrics {
+    font-size: 18px;
+    padding: 10px;
+    word-wrap: break-word;
+    overflow-x: hidden;
+  }
+
+  /* LÍNEAS (más espacio para acordes) */
+  .linea {
+    margin-bottom: 20px;
+    padding-top: 12px;
+  }
+
+  /* ACORDES */
+  .acorde {
+    font-size: 18px;
+    top: -16px;
+  }
+
+  /* BLOQUES (mejor separación entre palabras) */
+  .bloque {
+    margin-right: 4px;
+  }
+
+  /* BOTÓN ACORDES */
+  .btn-acordes {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  /* CONTROLES TONO */
+  .controles-tono {
+    width: 100%;
+    justify-content: center;
+    margin: 12px 0;
+  }
+
+  .btn-tono {
+    width: 42px;
+    height: 42px;
+    font-size: 20px;
+  }
+
+  .indicador-tono {
+    font-size: 16px;
+  }
+
+  /* NAV (tu código ajustado, casi igual) */
+  .nav-toggle {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #222;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 60px;
+    z-index: 1000;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu > li {
+    width: 100%;
+    list-style: none;
+  }
+
+  .menu > li > a {
+    width: 100%;
+    padding: 12px 20px;
+    border-bottom: 1px solid #333;
+    color: white;
+    display: block;
+    text-align: left;
+  }
+
+  .dropdown-menu {
+    position: static;
+    background: #333;
+    width: 100%;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: none;
+  }
+
+  .dropdown.active .dropdown-menu {
+    display: block;
+  }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canciones Favoritas</title>
+  <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+  <header>
+      <h1>Cancionero Musico IME Espiritu Santo</h1>
+      <input type="text" id="searchBar" placeholder="Buscar canción..." />
+    </header>
+
+     <nav class="navbar">
+  <div class="nav-header">
+    <button class="nav-toggle" id="navToggle">☰</button>
+    <a href="señor.html"><span class="nav-title">⛪</span></a>
+  </div>
+
+  <ul class="menu" id="navMenu">
+    <li class="dropdown">
+      <a href="#">Coritos ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="señor.html">Al Señor</a></li>
+        <li><a href="jesus.html">A Jesús</a></li>
+        <li><a href="index.html">Al Espíritu Santo</a></li>
+      </ul>
+    </li>
+
+    <li class="dropdown">
+      <a href="#">Himnos ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="himnos-señor.html">Al Señor</a></li>
+        <li><a href="padre.html">Al Padre</a></li>
+        <li><a href="himnos-jesus.html">A Jesús</a></li>
+        <li><a href="himnos-espiritu.html">Al Espíritu Santo</a></li>
+        <li><a href="perdon.html">De Perdón</a></li>
+        <li><a href="navideños.html">Navideños</a></li>
+      </ul>
+    </li>
+
+    <li class="dropdown">
+      <a href="#">Otros ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="maria.html">Virgen María</a></li>
+        <li><a href="eucaristico.html">Eucarísticos</a></li>
+        <li><a href="liturgico.html">Litúrgicos</a></li>
+        <li><a href="rezos.html">Rezos</a></li>
+      </ul>
+    </li>
+
+    <li><a href="canciones_nuevas.html" class="destacado azul">🎼 Canciones Nuevas</a></li>
+    <li><a href="favoritos.html" class="destacado rojo">❤️ Favoritos</a></li>
+    <li><a href="indice.html" class="destacado verde">📖 Índice</a></li>
+  </ul>
+</nav>
+<h2 id="favoritos">FAVORITOS</h2>
+  <main id="favoritosContainer"></main>
+<script src="cancionero.js"></script>
+
+</body>
+</html>
